@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Info",
+        "icon": "bi bi-person",
+        "url": "UserInfo.html",
+        "template":"index.html"
+    }
+]

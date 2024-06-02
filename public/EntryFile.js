@@ -67,10 +67,19 @@ let StartFunc = () => {
     };
 
     mkdirSync(toFolderName);
+    copyAssets();
 
     LoopMenu(menu);
 
     console.log(`Inserted to the bin folder : ${menu.length} menu items`);
+};
+
+const copyAssets = () => {
+    fs.cp(`./Template`, `./${toFolderName}`, { recursive: true }, (err) => {
+        if (err) {
+          console.error(err);
+        }
+      });
 };
 
 StartFunc();

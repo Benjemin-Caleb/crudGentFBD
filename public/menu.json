@@ -3,6 +3,12 @@
         "name": "Info",
         "icon": "bi bi-person",
         "url": "UserInfo.html",
-        "template":"index.html"
+        "template": "index.html"
+    },
+    {
+        "name": "Dashboard",
+        "icon": "bi bi-person",
+        "url": "Dashboard.html",
+        "template": "Dashboard.html"
     }
 ]

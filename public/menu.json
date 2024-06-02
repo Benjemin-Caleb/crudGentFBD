@@ -10,5 +10,11 @@
         "icon": "bi bi-person",
         "url": "Dashboard.html",
         "template": "Dashboard.html"
+    },
+    {
+        "name": "Show",
+        "icon": "bi bi-person",
+        "url": "Show.html",
+        "template": "Show.html"
     }
 ]

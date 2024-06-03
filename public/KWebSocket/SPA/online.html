@@ -116,10 +116,10 @@
                     <i class="bi bi-justify fs-3"></i>
                 </a>
             </header>
-
+           <div id="container">
             <div class="page-heading" id="pageId">
                 <div class="page-title">
-                    <div class="row">
+                    <div class="row" id="row">
                         <div class="col-12 col-md-6 order-md-1 order-last" id="headId">
                             <h3 id="OnlinePeopleId">Online People</h3>
 
@@ -153,7 +153,7 @@
                     </div>
                 </section>
             </div>
-
+              </div>
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
@@ -349,13 +349,44 @@
             </div>
         </div>
     </template>
-
+    <template id="templateMultiChatMsg">
+        <div class="chat chat-left" id = "chat">
+            <div class="chat-body">
+                <div class="chat-message" id="chat-message"></div>
+            </div>
+        </div>
+    </template> 
     <template id="templateMultiChat">
-        <div id = "multi-recieve-msg">
-    </div>
+        <div class="col-md-6 multi-chat-class" id="multi-chat-id">
+            <div class="card">
+                <div class="card-header">
+                    <div class="media d-flex align-items-center">
+                        <div class="name flex-grow-1">
+                            <h6 class="mb-0" id="fromNameId">Alfy</h6>
+                            <span class="text-xs">Online</span>
+                        </div>
+                        <button class="btn btn-sm">
+                            <i data-feather="x"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body pt-4 bg-grey">
+                    <div class="multi-chat-content" id="multi-chat-content">
+                        
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="message-form d-flex flex-direction-column align-items-center">
+                        <a href="#" class="black"><i data-feather="smile"></i></a>
+                        <div class="d-flex flex-grow-1 ms-4">
+                            <input type="text" class="form-control" placeholder="Type your message..">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </template>
-
-    
+        
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

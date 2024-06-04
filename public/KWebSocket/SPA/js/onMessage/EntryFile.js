@@ -19,9 +19,11 @@ let StartFunc = (inEvent) => {
         displayReceivedMessage(data);
     };
 
-    if (data.type === 'MyName') {
+    if (data.Type === 'ChangeName') {
+        console.log("data from server rrrrr", data);
         StartFuncMyName(data);
     };
+
 };
 
 export { StartFunc };

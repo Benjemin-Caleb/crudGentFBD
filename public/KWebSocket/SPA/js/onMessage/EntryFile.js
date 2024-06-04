@@ -5,15 +5,15 @@ import { StartFunc as displayOnlineClients } from "./displayOnlineClients/EntryF
 let StartFunc = (inEvent) => {
     const data = JSON.parse(inEvent.data);
 
-    if (data.type === 'returnOnlineClientsWOMe') {
+    if (data.Type === 'returnOnlineClientsWOMe') {
         displayOnlineClients(data.res);
     };
 
-    if (data.type === 'GetWebSocketId') {
+    if (data.Type === 'GetWebSocketId') {
         localStorage.setItem('webSocketId', data.webSocketId);
     };
 
-    if (data.type === 'sendMessage') {
+    if (data.Type === 'sendMessage') {
         displayReceivedMessage(data);
     };
 

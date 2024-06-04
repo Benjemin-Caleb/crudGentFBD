@@ -6,6 +6,6 @@ let StartFunc = ({ inDataAsString, inws, inClients }) => {
         }
     };
 
-    inws.send(JSON.stringify({ type: 'returnOnlineClientsWOMe', res: LocalArray }));
+    inws.send(JSON.stringify({ Type: 'returnOnlineClientsWOMe', res: LocalArray }));
 }
 export { StartFunc };

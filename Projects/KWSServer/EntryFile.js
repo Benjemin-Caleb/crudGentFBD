@@ -22,7 +22,7 @@ let WsOnConnection = (ws, req) => {
     let localWebSocketData=clients.get(ws);
     // console.log("localWebSocketData",localWebSocketData);
     
-    ws.send(JSON.stringify({ type: 'GetWebSocketId', webSocketId: localWebSocketData.id }));
+    ws.send(JSON.stringify({ Type: 'GetWebSocketId', webSocketId: localWebSocketData.id }));
     // CommonSaveToJsonOnConnections({
     //     inVerifyToken: LocalFromVerifyToken,
     //     inws: ws,

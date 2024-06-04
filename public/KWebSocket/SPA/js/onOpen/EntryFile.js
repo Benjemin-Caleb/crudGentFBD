@@ -1,14 +1,11 @@
 // import { Json } from "sequelize/lib/utils";
 
 let StartFunc = (event) => {
-  console.log("WebSocket is open now.");
   document.getElementById("UserNameId").style.color = "green";
-  webSocket.send("k1");
 
   //my ipaddress
   GetMyAddress()
     .then((ip) => {
-      // console.log("ip: ", ip);
       webSocket.send(JSON.stringify({ Type: "myIpAddress", ip: ip }));
     })
     .catch((error) => {

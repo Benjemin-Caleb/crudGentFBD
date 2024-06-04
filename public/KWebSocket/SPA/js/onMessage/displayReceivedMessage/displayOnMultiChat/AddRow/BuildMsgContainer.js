@@ -1,17 +1,26 @@
-let StartFunc = (inData) => {
-    BuildMsgContainer(inData);
+let StartFunc = ({ inData, len }) => {
+    let chatContainer = jFBuildMsgContainer();
+    jFAppendMsgContainer({ chatContainer, len, uniqueId :inData.fromId});
+    let app = document.getElementById("container");
+    app.querySelector(".chatrow").append(chatContainer);
 };
 
-let BuildMsgContainer = ({inData:inData,len}) => {
-    let temp = document.getElementById("templateMultiChat");
-    let uniqueId = inData.fromId;
+let jFBuildMsgContainer = () => {
+    let temp = document.getElementById("templateForMultiChatNewUser");
     let temp_content = temp.content;
-    let copyHTML = document.importNode(temp_content, true);
-    let app = document.getElementById("container");
-    app.querySelector(".chatrow").append(copyHTML);
-    document.getElementById("multi-chat-id").id = uniqueId;
-    console.log("len", len);
-    document.getElementsByClassName("fromNameClass")[len].innerHTML = uniqueId;
+     return document.importNode(temp_content, true);
+}
+
+let jFAppendMsgContainer = ({ chatContainer, len ,uniqueId }) => {
+    // let app = document.getElementById("container");
+    // app.querySelector(".chatrow").append(copyHTML);
+    chatContainer.querySelector(".multi-chat-content").id = uniqueId;
+    chatContainer.querySelector(".fromNameClass").innerHTML = uniqueId;
+
+
+    // document.getElementById("multi-chat-id").id = uniqueId;
+    // document.getElementsByClassName("fromNameClass")[len].innerHTML = uniqueId;
+
 }
 
 export { StartFunc };

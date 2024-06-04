@@ -1,4 +1,5 @@
 let StartFunc = () => {
+  document.getElementById('container').className = "MutliChatClass";
   document.getElementById("container").innerHTML = "";
   let temp = document.getElementById("templateMultiChatContainer");
   let temp_content = temp.content;

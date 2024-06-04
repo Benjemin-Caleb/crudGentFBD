@@ -1,4 +1,4 @@
-import { StartFunc as StartFunconMessage } from './onMessage/EntryFile.js';
+import { StartFunc as StartFunconScreen } from './onScreen/EntryFile.js';
 import {StartFunc as StartFunconOpen} from "./onOpen/EntryFile.js";
 
 let jVarLocalHostName = window.location.host;
@@ -21,7 +21,7 @@ let jFLocalEstablishWebSocket = () => {
     
     webSocket.onopen = StartFunconOpen;
 
-    webSocket.onmessage = StartFunconMessage;
+    webSocket.onmessage = StartFunconScreen;
 
     webSocket.onclose = function (e) {
         console.log("Socket is closed. Reconnect will be attempted in 1 second.");

@@ -1,4 +1,5 @@
 let StartFunc = () => {
+  document.getElementById('container').className = "ProfileClass";
   let temp = document.getElementById("templateAlterName");
   let clon = temp.content.cloneNode(true);
   let replace = document.getElementById("SectionId");

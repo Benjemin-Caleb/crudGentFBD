@@ -1,6 +1,7 @@
 import { StartFunc as StartFuncAddListeners } from "./AddListeners/EntryFile.js";
 
 let StartFunc = () => {
+  document.getElementById('container').className = "ChatClass";
   let temp = document.getElementById("templateChatBox");
   let clon = temp.content.cloneNode(true);
   let replace = document.getElementById("SectionId");

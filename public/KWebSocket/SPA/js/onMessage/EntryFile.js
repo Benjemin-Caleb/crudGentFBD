@@ -3,6 +3,7 @@ import { StartFunc as displayReceivedMessage } from "./displayReceivedMessage/En
 import { StartFunc as displayOnlineClients } from "./displayOnlineClients/EntryFile.js";
 
 let StartFunc = (inEvent) => {
+    console.log("starting", inEvent.data);
     const data = JSON.parse(inEvent.data);
     console.log("data from server", data);
 

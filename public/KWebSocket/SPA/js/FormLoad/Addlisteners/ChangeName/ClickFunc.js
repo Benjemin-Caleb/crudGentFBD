@@ -3,6 +3,7 @@ let StartFunc = async () => {
   const response = await fetch(ipAPI);
   const data = await response.json();
   const inputValue = "";
+  
   const { value: username } = await Swal.fire({
     title: "Enter your User Name",
     input: "text",
@@ -14,6 +15,7 @@ let StartFunc = async () => {
       }
     },
   });
+  
   if (username) {
     let jVarLocalObjectToSend = {};
     jVarLocalObjectToSend.Type = "ChangeName";

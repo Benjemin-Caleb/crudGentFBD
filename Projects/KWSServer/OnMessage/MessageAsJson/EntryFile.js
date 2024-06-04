@@ -15,7 +15,7 @@ let StartFunc = ({ inDataAsJson, inws, inClients, inWss }) => {
         };
 
         if (LocalDataAsJson.Type === "ChangeName") {
-            StartFuncChangeName({ inDataAsJson: LocalDataAsJson, inws: inws, inClients: inClients });
+            StartFuncChangeName({ inDataAsJson: LocalDataAsJson, inws: inws, inClients: inClients,inWss });
         };
 
         if (LocalDataAsJson.Type === "sendMessage") {

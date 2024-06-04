@@ -1,4 +1,5 @@
 let StartFunc = (inData) => {
+    console.log(inData);
 
     let jVarCurrentContainer = jFSearchContainer(inData);
     jFAppendNewMsg({inData, jVarCurrentContainer});

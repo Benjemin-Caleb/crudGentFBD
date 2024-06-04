@@ -3,7 +3,9 @@ import { StartFunc as StartFuncjFLocalToInputUserNameId } from "./jFLocalToInput
 let StartFunc = (inJsonData) => {
     let jVarLocalData = inJsonData;
     // console.log("jVarLocalData : ", jVarLocalData);
-    StartFuncjFLocalToInputUserNameId(jVarLocalData.Name);
+    if(jVarLocalData.fromId === localStorage.getItem('webSocketId')){
+    StartFuncjFLocalToInputUserNameId(jVarLocalData.Message);
+    }
 };
 
 export { StartFunc };

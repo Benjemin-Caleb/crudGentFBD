@@ -356,13 +356,14 @@
             </div>
         </div>
     </template> 
-    <template id="templateMultiChat">
-        <div class="col-md-5 multi-chat-class mx-2" id="multi-chat-id">
+    <template id="templateForMultiChatNewUser">
+        <div class="col-md-5 multi-chat-class mx-2">
             <div class="card">
                 <div class="card-header">
                     <div class="media d-flex align-items-center">
                         <div class="name flex-grow-1">
-                            <h6 class="mb-0 fromNameClass" id="fromNameId"></h6>
+                            <h6 class="mb-0" id="fromId" style="display: none;"></h6>
+                            <h6 class="mb-0 fromNameClass" id="fromNameId">Alfy</h6>
                             <span class="text-xs">Online</span>
                         </div>
                         <button class="btn btn-sm">
@@ -371,7 +372,7 @@
                     </div>
                 </div>
                 <div class="card-body pt-4 bg-grey">
-                    <div class="multi-chat-content" id="multi-chat-content">
+                    <div class="multi-chat-content">
                         
                     </div>
                 </div>

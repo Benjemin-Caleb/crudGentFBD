@@ -6,8 +6,7 @@ let StartFunc = () => {
             element.classList.add('active');
         });
     });
-    console.log("online isisis ",online);
-    console.log("chat isisis ",chat);
+
 };
 
 export { StartFunc };

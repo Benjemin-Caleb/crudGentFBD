@@ -1,4 +1,4 @@
-import { StartFunc as StartFuncAddListeners } from "../../../ChatScreenListeners/EntryFile.js";
+import { StartFunc as StartFuncAddListeners } from "../../../EntryFile.js";
 
 let StartFunc = () => {
   document.getElementById('container').className = "ChatClass";
@@ -8,7 +8,7 @@ let StartFunc = () => {
   document.getElementById("pageId").replaceChild(clon, replace);
   document.getElementById("headId").style.display = "none";
   replace.style.display = "none";
-  document.getElementById("breadCrumpId").style.display = "none";
+  // document.getElementById("breadCrumpId").style.display = "none";
   StartFuncAddListeners();
 };
 

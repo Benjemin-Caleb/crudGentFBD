@@ -1,4 +1,4 @@
-import { StartFunc as StartFuncAddListeners } from '../../../MultiChatIdListeners/EntryFile.js';
+import { StartFunc as StartFuncAddListeners } from '../../../Entryfile.js';
 
 let StartFunc = () => {
   document.getElementById('container').className = "MultiChatClass";

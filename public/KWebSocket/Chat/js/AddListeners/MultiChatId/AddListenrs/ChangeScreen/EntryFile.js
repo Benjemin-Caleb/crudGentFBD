@@ -2,8 +2,9 @@ import { StartFunc as StartFuncClickFunc } from "./ClickFunc/EntryFile.js";
 
 let StartFunc = () => {
   document
-    .getElementById("onlineId")
+    .getElementById("MultiChatId")
     .addEventListener("click", StartFuncClickFunc);
 };
 
 export { StartFunc };
+

@@ -1,14 +1,10 @@
 let StartFunc = (inData) => {
-    console.log(inData);
-
     let jVarCurrentContainer = jFSearchContainer(inData);
     jFAppendNewMsg({inData, jVarCurrentContainer});
 
 };
 
 let jFAppendNewMsg = ({inData,jVarCurrentContainer}) => {
-    
-    console.log(jVarCurrentContainer)
     let receivedMessage = inData.Message;
     let chatContent = document.getElementsByClassName("multi-chat-content")[jVarCurrentContainer];
     const template = document.getElementById("templateMultiChatMsg");

@@ -8,7 +8,7 @@ let StartFunc = () => {
   document.getElementById("pageId").replaceChild(clon, replace);
   document.getElementById("headId").style.display = "none";
   replace.style.display = "none";
-  document.getElementById("breadCrumpId").style.display = "none";
+  // document.getElementById("breadCrumpId").style.display = "none";
 };
 
 export { StartFunc };

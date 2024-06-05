@@ -2,13 +2,9 @@ import { StartFunc as StartFuncDisplayOnChatBox } from "./displayOnChatBox/Entry
 import { StartFunc as StartFuncDisplayOnMultiChat } from "./displayOnMultiChat/EntryFile.js";
 
 let StartFunc = (data) => {
-  console.log("data : ", data);
-};
-
-let StartFunc1 = (data) => {
   try {
     const profileId = document.getElementById("receiverId").innerText;
-
+    console.log("profileId : ", profileId);
     StartFuncDisplayOnChatBox({inData: data, profileId});
 
     return;

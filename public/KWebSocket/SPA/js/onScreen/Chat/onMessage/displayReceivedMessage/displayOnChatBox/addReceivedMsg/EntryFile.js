@@ -1,6 +1,7 @@
 let StartFunc = (inData, profileId) => {
     if (inData.fromId === profileId) {
         let receivedMessage = inData.Message;
+        console.log("receivedMessage : ", receivedMessage);
         const template = document.getElementById("templateChatMsg");
         const chatContent = document.getElementById("chat-content");
         let chatMessage = template.content.getElementById("chat-message");

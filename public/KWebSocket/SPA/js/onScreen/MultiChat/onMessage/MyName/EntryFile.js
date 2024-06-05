@@ -16,7 +16,8 @@ let jFLocalShowUserName = ({ inJsonData }) => {
     let inId = inJsonData.fromId;
     let jVarLocalDiv = document.getElementById(inId);
     console.log("jVarLocalDiv : ", jVarLocalDiv);
-    jVarLocalDiv.closest(".card").querySelector(".fromNameClass").innerHTML = inUserName;
+    console.log(jVarLocalDiv.closest(".card"));
+    jVarLocalDiv.querySelector(".fromNameClass").innerHTML = inUserName;
 };
 
 export { StartFunc };

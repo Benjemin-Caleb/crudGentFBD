@@ -23,7 +23,6 @@ let StartFunc = (inEvent) => {
     
     if(ScreenClass === "ProfileClass")
     {
-        console.log(ScreenClass);
         StartFuncProfileClass(inEvent);
     }
 }

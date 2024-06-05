@@ -14,7 +14,7 @@ let jFBuildMsgContainer = () => {
 let jFAppendMsgContainer = ({ chatContainer, len ,uniqueId }) => {
     // let app = document.getElementById("container");
     // app.querySelector(".chatrow").append(copyHTML);
-    chatContainer.querySelector(".multi-chat-content").id = uniqueId;
+    chatContainer.querySelector(".multi-chat-class").id = uniqueId;
     chatContainer.querySelector(".fromNameClass").innerHTML = uniqueId;
 
 

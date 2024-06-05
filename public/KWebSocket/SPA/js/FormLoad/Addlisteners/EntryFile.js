@@ -1,17 +1,19 @@
-import { StartFunc as StartFuncGetOnlineUsers } from "./GetOnlineUsers/EntryFile.js";
-import { StartFunc as StartFuncGetProfileId } from "./GetProfileId/EntryFile.js";
-import { StartFunc as StartFuncChangeNameId } from "./ChangeName/EntryFile.js";
-import { StartFunc as StartFuncChatId } from "./ChatId/EntryFile.js";
-import { StartFunc as StartFuncMultiChatId } from "./MultiChatId/EntryFile.js";
-import { StartFunc as StartFuncCommonListeners } from "./commonListeners/EntryFile.js";
+import { StartFunc as StartFuncOnlineScreenListeners } from "./OnlineScreenListeners/EntryFile.js";
+import { StartFunc as StartFuncChatScreenListeners } from "./ChatScreenListeners/EntryFile.js";
+import { StartFunc as StartFuncMultiChatScreenListeners } from  "./ProfileScreenListeners/EntryFile.js";
+import { StartFunc as StartFuncProfileScreenListeners } from  "./MultiChatIdListeners/EntryFile.js";
+
+import { StartFunc as StartFuncSideMenuListeners } from "./SideMenuListeners/EntryFile.js";
+import { StartFunc as StartFuncLoadScreens } from "./LoadScreens/EntryFile.js";
 
 const StartFunc = () => {
-  StartFuncCommonListeners();
-  StartFuncGetOnlineUsers();
-  StartFuncGetProfileId();
-  StartFuncChangeNameId();
-  StartFuncChatId();
-  StartFuncMultiChatId();
+    StartFuncOnlineScreenListeners();
+    StartFuncChatScreenListeners();
+    StartFuncProfileScreenListeners();
+    StartFuncMultiChatScreenListeners();
+
+    StartFuncSideMenuListeners();
+    StartFuncLoadScreens();
 };
 
 export { StartFunc };

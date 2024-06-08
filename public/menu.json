@@ -12,10 +12,24 @@
         "template": "Dashboard.html"
     },
     {
-        "name": "Show",
+        "name": "Accounts",
         "icon": "bi bi-person",
-        "url": "Show.html",
+        "url": "Accounts.html",
         "template": "Show.html",
         "tableName":"Accounts"
+    },
+    {
+        "name": "AccountsCreate",
+        "icon": "bi bi-person",
+        "url": "AccountsCreate.html",
+        "template": "Create.html",
+        "tableName":"Accounts"
+    },
+    {
+        "name": "Openings",
+        "icon": "bi bi-person",
+        "url": "Openings.html",
+        "template": "Show.html",
+        "tableName":"Openings"
     }
 ]

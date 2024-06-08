@@ -19,6 +19,26 @@ env.addGlobal('startsWith', startsWith);
 
 let html = fs.readFileSync("Normal.html", 'utf8');
 
+const InsertHtml = ({ inMenuItem }) => {
+    let menuItem = inMenuItem;
+
+    if ("template" in menuItem) {
+        html = fs.readFileSync(`Template/Html/${menuItem.template}`, 'utf8');
+    }
+    else {
+        html = fs.readFileSync("Normal.html", 'utf8');
+    };
+
+    let data = nunjucks.renderString(html,
+        { menu, menuItem }
+    );
+    let folder = menuItem.url.slice(0, -5);
+
+    if (!fs.existsSync(`/${folder}`)) fs.mkdirSync(`bin/${folder}`);
+
+    fs.writeFileSync(`bin/${folder}/${menuItem.url}`, data);
+};
+
 const LoopMenu = (inMenuJson) => {
     inMenuJson.forEach(menuItem => {
         if ("children" in menuItem) {
@@ -37,22 +57,7 @@ const LoopMenu = (inMenuJson) => {
             });
         }
         else {
-            if ("template" in menuItem) {
-                html = fs.readFileSync(`Template/${menuItem.template}`, 'utf8');
-            }
-            else {
-                html = fs.readFileSync("Normal.html", 'utf8');
-            };
-
-            let data = nunjucks.renderString(html,
-                { menu, menuItem }
-            );
-            let folder = menuItem.url.slice(0, -5);
-
-            if (!fs.existsSync(`
-        /${folder}`)) fs.mkdirSync(`bin/${folder}`);
-            // fs.mkdirSync(`bin/${folder}`);
-            fs.writeFileSync(`bin/${folder}/${menuItem.url}`, data);
+            InsertHtml({ inMenuItem: menuItem });
         };
     });
 };
@@ -77,9 +82,9 @@ let StartFunc = () => {
 const copyAssets = () => {
     fs.cp(`./Template`, `./${toFolderName}`, { recursive: true }, (err) => {
         if (err) {
-          console.error(err);
+            console.error(err);
         }
-      });
+    });
 };
 
 StartFunc();

@@ -1,5 +1,7 @@
+import ConfigJson from '../../../../Config.json' with {type: 'json'};
+
 let StartFunc = async () => {
-    let jVarLocalFetchUrl = `/bin/Accounts/DataOnly`;
+    let jVarLocalFetchUrl = `/bin/${ConfigJson.tableName}/DataOnly`;
     let response = await fetch(jVarLocalFetchUrl);
     
     return await response;

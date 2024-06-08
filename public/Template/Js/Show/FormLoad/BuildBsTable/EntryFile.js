@@ -1,4 +1,7 @@
 import { StartFunc as StartFuncTableTag } from "./TableTag.js";
+import ConfigJson from `/bin/config/${jVarGlobalTableName}` with {type: 'json'};
+// import ConfigJson from '/bin/config/Openings.json' with {type: 'json'};
+
 
 const StartFunc = () => {
     StartFuncTableTag();
@@ -9,7 +12,8 @@ const jFLocalInitialize = () => {
     var $table = $('#table');
 
     $table.bootstrapTable({
-        data: []
+        data: [],
+        columns:ConfigJson.tableConfig.columns
     });
 };
 

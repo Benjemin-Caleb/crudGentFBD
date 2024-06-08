@@ -15,6 +15,7 @@
         "name": "Show",
         "icon": "bi bi-person",
         "url": "Show.html",
-        "template": "Show.html"
+        "template": "Show.html",
+        "tableName":"Accounts"
     }
 ]
